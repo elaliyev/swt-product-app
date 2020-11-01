@@ -20,6 +20,7 @@ import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.widgets.Label;
 
 public class Products {
 
@@ -107,6 +108,10 @@ public class Products {
 		typeColumn.setWidth(119);
 		descriptionColumn.setWidth(400);
 		productsTable.setHeaderVisible(true);
+		
+		Label lblClickToThe = new Label(shell, SWT.NONE);
+		lblClickToThe.setBounds(713, 16, 140, 14);
+		lblClickToThe.setText("* click to the row for edit");
 
 		refreshTable(products);
 
@@ -134,5 +139,4 @@ public class Products {
 					product.getDescription() });
 		}
 	}
-
 }
